@@ -1,0 +1,6 @@
+{
+  "name": "Botty Mc Bot Face",
+  "description": "The server side for Botty.",
+  "image": "heroku/nodejs",
+  "repository": "https://github.com/timothy-janssen/Botty-Mc-Bot-Face"
+}
