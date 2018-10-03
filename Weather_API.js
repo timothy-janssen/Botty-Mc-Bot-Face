@@ -22,7 +22,8 @@ getWeather = function (city_ID) {
    const card = {
     title: results.name,
     subtitle: results.weather[0].description + ' and ' + results.main.temp,
-    //imageUrl: getImgURL(results.weather.id),
+    imageUrl: getImgURL(results.weather.id),
+    buttons: []
    };
 
 
