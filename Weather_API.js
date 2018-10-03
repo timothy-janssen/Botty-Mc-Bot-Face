@@ -18,9 +18,6 @@ getWeather = function (city_ID) {
       },
     }];
    }
-   console.log('\n**************************************************************\n');
-   console.log(results);
-   console.log('\n**************************************************************\n');
 
    const card = {
     title: results.name,
@@ -28,6 +25,8 @@ getWeather = function (city_ID) {
     imageUrl: getImgURL(results.weather.id),
    };
 
+
+   console.log(card);
    return [
      {
        type: 'text',
@@ -39,7 +38,7 @@ getWeather = function (city_ID) {
 }
 
 function getImgURL(weatherID){
-  return 'https://images.all-free-download.com/images/graphiclarge/weather_symbols_clip_art_17459.jpg';
+  return '';//'https://images.all-free-download.com/images/graphiclarge/weather_symbols_clip_art_17459.jpg';
 }
 
 module.exports = getWeather();
