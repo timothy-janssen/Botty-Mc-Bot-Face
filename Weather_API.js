@@ -40,26 +40,26 @@ getWeather = function (city_ID) {
 }
 
 function getImgURL(weatherID){
+  iconID = '';
   switch(weatherID.toString().charAt(0)){
-    case 2:
+    case '2':
       iconID = '11d';
       break;
-    case 3:
+    case '3':
       iconID = '09d';
       break;
-    case 5:
+    case '5':
       iconID = '10d';
       break;
-    case 6:
+    case '6':
       iconID = '13d';
       break;
-    case 7:
+    case '7':
       iconID = '50d';
       break;
-    case 8:
+    case '8':
       iconID = '02d';
       break;
-
   }
   return 'http://openweathermap.org/img/w/' + iconID + '.png';
   //return 'https://images.all-free-download.com/images/graphiclarge/weather_symbols_clip_art_17459.jpg';
