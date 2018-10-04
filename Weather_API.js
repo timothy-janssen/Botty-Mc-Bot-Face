@@ -40,7 +40,7 @@ getWeather = function (city_ID) {
 }
 
 function getImgURL(weatherID){
-  switch(weatherID.charAt(0);){
+  switch(weatherID.charAt(0)){
     case 2:
       iconID = '11d';
       break;
