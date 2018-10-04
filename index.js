@@ -22,7 +22,7 @@ app.post('/get-weather', (req, res) => {
 
   const cityId = getCityId(city.formatted);
 
-  return getWeather(cityId)
+  return getWeather(city.formatted)
     .then((card) => res.json({
      replies: card,
     }))

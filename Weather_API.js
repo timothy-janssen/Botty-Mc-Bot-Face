@@ -3,7 +3,7 @@ const axios = require('axios');
 const config = require('./config.js');
 
 getWeather = function (city_ID) {
- return axios.get(`https://api.openweathermap.org/data/2.5/weather?units=imperial&id=${city_ID}&APPID=${config.WEATHER_TOKEN}`, {
+ return axios.get(`https://api.openweathermap.org/data/2.5/weather?units=imperial&q=${city_ID}&APPID=${config.WEATHER_TOKEN}`, {
 
  }).then(response => {
 
