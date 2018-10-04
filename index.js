@@ -14,23 +14,17 @@ app.post('/errors', (req, res) => {
    res.sendStatus(200); 
 });
 
-
 app.post('/get-weather', (req, res) => {
   console.log('[POST] /get-weather');
   const memory = req.body.conversation.memory;
-  const city = memory.location;
-  
-  return getWeather(city.formatted)
+  const city = memory.location.formatted;
+
+  console.log('Fetching data for ' + city);
+  return getWeather(city)
     .then((card) => res.json({
      replies: card,
     }))
     .catch((err) => console.error('weatherAPI::getWeather error: ', err));
  });
 
-
 app.listen(config.PORT, () => console.log(`App started on port ${config.PORT}`));
-
-
-function getCityId(name){
-  return 2172797;
-}
