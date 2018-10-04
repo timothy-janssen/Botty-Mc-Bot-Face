@@ -40,7 +40,7 @@ getWeather = function (city_ID) {
 }
 
 function getImgURL(weatherID){
-  switch(weatherID.charAt(0)){
+  switch(weatherID.toString().charAt(0)){
     case 2:
       iconID = '11d';
       break;
@@ -57,7 +57,7 @@ function getImgURL(weatherID){
       iconID = '50d';
       break;
     case 8:
-      iconID = ' 02d';
+      iconID = '02d';
       break;
 
   }
