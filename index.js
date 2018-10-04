@@ -19,9 +19,7 @@ app.post('/get-weather', (req, res) => {
   console.log('[POST] /get-weather');
   const memory = req.body.conversation.memory;
   const city = memory.location;
-
-  const cityId = getCityId(city.formatted);
-
+  
   return getWeather(city.formatted)
     .then((card) => res.json({
      replies: card,
