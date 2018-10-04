@@ -18,6 +18,7 @@ getWeather = function (city_ID) {
       },
     }];
    }
+   console.log(results);
 
    const card = {
     title: results.name,
@@ -39,7 +40,8 @@ getWeather = function (city_ID) {
 }
 
 function getImgURL(weatherID){
-  return 'https://images.all-free-download.com/images/graphiclarge/weather_symbols_clip_art_17459.jpg';
+  return 'http://openweathermap.org/img/w/' + weatherID + '.png';
+  //return 'https://images.all-free-download.com/images/graphiclarge/weather_symbols_clip_art_17459.jpg';
 }
 
 module.exports = getWeather();
